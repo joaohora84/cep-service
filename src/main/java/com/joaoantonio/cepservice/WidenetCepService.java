@@ -10,7 +10,7 @@ import javax.enterprise.context.Dependent;
 @Dependent
 public final class WidenetCepService extends AbstractCepService {
     
-    private static final String DOMINIO = "https://apps.widenet.com.br/";
+    private static final String DOMINIO = "https://apps.widenet.com.br/busca-cep/api/cep/";
 
     public WidenetCepService() {
         super(DOMINIO);
@@ -19,7 +19,7 @@ public final class WidenetCepService extends AbstractCepService {
     @Override
     protected String buildPath(String cep) {
         
-        return "busca-cep/api/cep.json?code=" + cep;
+        return cep + ".json"; 
         
     }
     

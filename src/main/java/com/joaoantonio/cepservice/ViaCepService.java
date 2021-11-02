@@ -12,6 +12,7 @@ import javax.enterprise.context.Dependent;
 public final class ViaCepService extends AbstractCepService {
 
     public ViaCepService() {
+        
         super("https://viacep.com.br");
     }
 
